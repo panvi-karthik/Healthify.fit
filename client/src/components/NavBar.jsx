@@ -43,12 +43,9 @@ export default function NavBar() {
   }, [location.pathname])
   // No animation on NavBar brand
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-success sticky-top shadow-sm">
-      <div className="container">
-        <Link to="/" className="navbar-brand fw-bold d-flex align-items-center">
-          <span className="brand-icon me-2" style={{ fontSize: '1.8rem' }}>
-            <span className="brand-icon-inner">🥗</span>
-          </span>
+    <nav className="navbar navbar-expand-lg navbar-dark bg-success sticky-top shadow-sm px-0">
+      <div className="container-fluid px-0 pe-3">
+        <Link to="/" className="navbar-brand fw-bold d-flex align-items-center ms-3">
           <div className="d-flex flex-column">
             <span className="brand-name" style={{ fontSize: '1.5rem', lineHeight: '1.2' }}>Healthify</span>
             <small className="text-white-50" style={{ fontSize: '0.7rem', letterSpacing: '0.05em' }}>Eat Smart, Live Well</small>
@@ -65,8 +62,8 @@ export default function NavBar() {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="nav">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+        <div className="collapse navbar-collapse flex-grow-1" id="nav">
+          <ul className="navbar-nav mx-auto justify-content-center gap-3 gap-lg-4 mb-2 mb-lg-0">
             <li className="nav-item">
               {location.pathname === '/' ? (
                 <a href="#section-dashboard" onClick={onScrollTo('section-dashboard')} className={`nav-link nav-pill ${activeSection==='section-dashboard' ? 'active' : ''}`}>Dashboard</a>
@@ -96,14 +93,14 @@ export default function NavBar() {
               )}
             </li>
           </ul>
-          <div className="d-flex align-items-center gap-2">
+          <div className="d-flex align-items-center gap-2 ms-lg-auto">
             {!hasToken ? (
               <>
                 <NavLink to="/login" className="btn btn-outline-light">Login</NavLink>
                 <NavLink to="/signup" className="btn btn-warning text-dark">Sign Up</NavLink>
               </>
             ) : (
-              <button onClick={onLogout} className="btn btn-outline-light">Logout</button>
+              <button onClick={onLogout} className="btn btn-outline-light me-2">Logout</button>
             )}
           </div>
         </div>
