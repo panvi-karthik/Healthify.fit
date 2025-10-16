@@ -1,0 +1,28 @@
+﻿node_modules/
+.env
+.env.*
+client/.env
+server/.env
+
+# Builds / caches
+/dist/
+/build/
+.cache/
+.next/
+/out/
+coverage/
+
+# IDE/OS
+.vscode/
+.DS_Store
+Thumbs.db
+*.swp
+
+# Runtime uploads and temp
+server/uploads/
+tmp/
+*.tmp
+
+# Archives
+*.zip
+Healthify.zip

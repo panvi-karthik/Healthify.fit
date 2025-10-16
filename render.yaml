@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: healthylife-server
+    env: node
+    rootDir: server
+    buildCommand: npm install
+    startCommand: node src/index.js
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: 18
+      - key: NODE_ENV
+        value: production
+      # Add the rest of your secrets in the Render dashboard for security:
+      # - key: MONGODB_URI
+      # - key: JWT_SECRET
+      # - key: CORS_ORIGIN
+      # - key: OPENAI_API_KEY
+      # - key: OPENAI_MODEL
+      # - key: OPENAI_VISION_MODEL
+      # - key: NUTRITIONIX_APP_ID
+      # - key: NUTRITIONIX_API_KEY
+      # - key: CLOUDINARY_CLOUD_NAME
+      # - key: CLOUDINARY_API_KEY
+      # - key: CLOUDINARY_API_SECRET
+      # - key: CLOUDINARY_FOLDER
