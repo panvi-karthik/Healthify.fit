@@ -247,6 +247,33 @@ export default function Dashboard() {
             <span className="badge bg-success">Weekly</span>
           </div>
           <Line data={chartData} options={options} height={120} />
+          <div className="mt-5">
+            <h5 className="mb-2">Tips to reach your goal weight</h5>
+            {deltaLabel === 'lose' && weightDelta > 0 ? (
+              <ul className="small mb-0">
+                <li>Target a modest daily calorie deficit (≈300–500 kcal).</li>
+                <li>Prioritize protein and fiber at each meal.</li>
+                <li>Fill half your plate with vegetables; limit sugary drinks and fried foods.</li>
+                <li>Walk 8–10k steps or 30–45 min activity most days.</li>
+                <li>Sleep 7–8 hours and stay hydrated.</li>
+              </ul>
+            ) : deltaLabel === 'gain' && weightDelta > 0 ? (
+              <ul className="small mb-0">
+                <li>Add a controlled daily surplus (≈300–500 kcal).</li>
+                <li>Increase meal frequency; include calorie‑dense, nutritious snacks.</li>
+                <li>Emphasize protein, whole grains, and healthy fats.</li>
+                <li>Strength train 3–4x/week to support lean mass.</li>
+                <li>Track progress weekly and adjust slowly.</li>
+              </ul>
+            ) : (
+              <ul className="small mb-0">
+                <li>Maintain a steady intake around your goal calories.</li>
+                <li>Keep protein high and focus on minimally processed foods.</li>
+                <li>Stay active most days and protect sleep and hydration.</li>
+                <li>Review weekly trends; adjust by 100–150 kcal if needed.</li>
+              </ul>
+            )}
+          </div>
         </div>
       </div>
     </div>

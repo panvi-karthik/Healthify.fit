@@ -183,8 +183,25 @@ body.dark .btn-ghost { border-color: rgba(255,255,255,.12); color: #e5e7eb; }
 }
 
 .card-healthy {
+  position: relative;
+  z-index: 0;
   border: 1px solid rgba(46, 125, 50, 0.15);
-  box-shadow: 0 8px 20px rgba(46, 125, 50, 0.08);
+  box-shadow:
+    0 8px 20px rgba(46, 125, 50, 0.08),
+    0 0 18px rgba(34, 197, 94, 0.15),
+    0 0 36px rgba(99, 102, 241, 0.12);
+}
+
+.card-healthy::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(34,197,94,0.45), rgba(59,130,246,0.45), rgba(168,85,247,0.45));
+  filter: blur(14px);
+  opacity: 0.4;
+  z-index: -1;
+  animation: chatGlowPulse 3s ease-in-out infinite;
 }
 
 .badge-veg { background-color: var(--hl-green); }
