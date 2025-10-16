@@ -35,8 +35,6 @@ const corsOptions = {
   credentials: true,
 }
 app.use(cors(corsOptions))
-// Ensure preflight requests for API routes are handled (Express v5 doesn't accept '*')
-app.options('/api/*', cors(corsOptions))
 app.use(express.json({ limit: '4mb' }))
 app.use(express.urlencoded({ extended: true }))
 app.use(morgan('dev'))
