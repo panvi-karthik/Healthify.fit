@@ -6,7 +6,7 @@ AI Nutrition & Meal Planner :-
 
 Managing nutrition and planning meals can be complex and time-consuming. This project is a full-stack web application designed to simplify this process through an intelligent, user-friendly platform.
 
-Users can register and log in to a personal dashboard where they can track their daily meals. By simply describing a meal, the application leverages the power of AI (using OpenAI and Nutritionix APIs) to fetch detailed nutritional information, making the logging process effortless and accurate.
+Users can register and log in to a personal dashboard where they can track their daily meals. By simply describing a meal, the application leverages the power of AI to fetch detailed nutritional information, making the logging process effortless and accurate.
 
 Beyond tracking, the app provides a smart daily calorie budget, automatically generates grocery lists based on the meals a user has logged, and even includes an AI chat assistant to answer dietary questions. The goal is to provide a seamless and powerful tool for anyone looking to take control of their health and diet. The entire application is built with a modern MERN stack, ensuring a fast, secure, and responsive experience.
 
@@ -29,7 +29,7 @@ Beyond tracking, the app provides a smart daily calorie budget, automatically ge
 * **Backend**: Node.js, Express.js, Mongoose
 * **Database**: MongoDB Atlas
 * **Authentication**: JSON Web Tokens (JWT)
-* **AI & Services**: OpenAI API, Nutritionix API
+* **AI & Services**: Perplexity API
 * **File Handling**: Multer, Cloudinary
 * **Deployment**: Vercel (Frontend), Render (Backend)
 
